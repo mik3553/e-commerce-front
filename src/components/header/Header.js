@@ -48,11 +48,13 @@ const Header = () => {
 
   const onLogOut = () => {
     localStorage.removeItem('token');
+    setUser(null);
   }
 
   return (
     <>
     <header>
+
       <div className='logo'  style={{marginLeft:'10px'}}>
         <Link to='/'><h1>E-commerce</h1></Link>
       </div>
@@ -77,7 +79,7 @@ const Header = () => {
     <nav ref={wrapperRef} className='nav-bar' >
       <ul className='nav-bar-list'>
         {
-          user &&  <li onClick={onLogOut} >
+          user &&  <li onClick={() => onLogOut()} >
             <Link className='nav-bar-link' to='/'><FontAwesomeIcon icon={faSignInAlt} className='fontAwsome' />Déconnection</Link>
           </li>
         }
