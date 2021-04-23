@@ -1,0 +1,53 @@
+footer {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(32, 70, 2);
+    /* background-color: rgb(218, 193, 193); */
+    min-height: 4rem;
+}
+footer h4 {
+    color: white;
+    font-weight: bolder;
+    margin : 1rem auto;
+}
+footer li {
+    color : white;
+    font-weight: lighter;
+    padding : 0.5rem 0;
+}
+footer a {
+    color : grey;
+}
+footer a:hover {
+    color : whitesmoke;
+    font-weight: 400;
+}
+footer section {
+    display : flex;
+    flex-direction: column;
+}
+
+
+@media screen and (min-width: 1024px){
+
+    footer {
+        
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+    }
+    footer section {
+        display : flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 70%;
+    }
+    footer section article {
+        margin: 1rem auto;
+    }
+ 
+}

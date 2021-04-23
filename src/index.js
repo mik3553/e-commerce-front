@@ -3,10 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import LogIn from "./components/logIn/LogIn";
+import Register from "./components/register/Register";
+import MyAccount from "./components/account/MyAccount";
+
+
+const Routes = () => {
+    return (
+        <BrowserRouter>
+            <Switch>
+                <Route exact path='/' component={App}/>
+                <Route path='/login' component={LogIn}/>
+                <Route path='/inscription' component={Register}/>
+                <Route path='/mon-compte' component={MyAccount}/>
+            </Switch>
+        </BrowserRouter>
+    )
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
