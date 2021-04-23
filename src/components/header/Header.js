@@ -44,7 +44,7 @@ const Header = () => {
         }
       })
     }
-  },[user])
+  },[user, localStorage.getItem('token')])
 
   const onLogOut = () => {
     localStorage.removeItem('token');
